@@ -4,5 +4,11 @@ pipeline {
       label 'windows'
       image 'mcr.microsoft.com/powershell'
     }
+    stages {
+      stage('Test') {
+        steps {
+          sh 'node --version'
+        }
+      }
+    }
   }
-}
