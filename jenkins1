@@ -1,15 +1,8 @@
 pipeline {
-    agent {
-        docker {
+  agent {
+    docker {
       label 'windows'
       image 'mcr.microsoft.com/powershell'
     }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'powershell --version'
-            }
-        }
-    }
-}
+  }
 }
